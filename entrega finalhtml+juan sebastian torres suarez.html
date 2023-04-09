@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notas de Estudiantes</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.css">
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #ffffff;
+		}
+	 code
+	h1 {
+		text-align: center;
+		color: #003366;
+	}
+
+	form {
+		background-color: #fff;
+		padding: 20px;
+		border-radius: 5px;
+		box-shadow: 0px 0px 10px #dcdcdc;
+		max-width: 600px;
+		margin: auto;
+		margin-bottom: 20px;
+	}
+
+	form label {
+		display: inline-block;
+		width: 100px;
+		margin-bottom: 10px;
+		color: #000000;
+	}
+
+	form input[type="text"], form input[type="number"] {
+		padding: 5px;
+		border-radius: 5px;
+		border: none;
+		box-shadow: 0px 0px 5px #050505;
+		margin-bottom: 20px;
+		width: 100%;
+		max-width: 300px;
+	}
+
+	form button[type="submit"], #reset-btn {
+		background-color: #003366;
+		color: #fff;
+		border: none;
+		border-radius: 5px;
+		padding: 10px 20px;
+		cursor: pointer;
+		margin-right: 10px;
+	}
+
+	form button[type="submit"]:hover, #reset-btn:hover {
+		background-color: #005b96;
+	}
+
+	#error-msg {
+		color: red;
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	#notas-list {
+		background-color: #fff;
+		padding: 20px;
+		border-radius: 5px;
+		box-shadow: 0px 0px 10px #dcdcdc;
+		max-width: 800px;
+		margin: auto;
+	}
+
+	#notas-list h2 {
+		color: #003366;
+		margin-bottom: 20px;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		text-align: center;
+	}
+
+	table th, table td {
+		padding: 10px;
+		border: 1px solid #dcdcdc;
+	}
+
+	table th {
+		background-color: #003366;
+		color: #fff;
+	}
+
+	table td:nth-child(1) {
+		text-align: left;
+	}
+
+	table td:last-child {
+		font-weight: bold;
+	}
+    img {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+</head>
+<body>
+	<h1>Notas de Estudiantes</h1>
+    <img src="https://staticclvf5a.lavozdelinterior.com.ar/files/promociones/miniatura_270x160_-_ch.jpg" alt="Imagen de promoción">
+	<form id="notas-form">
+	<span id="error-msg"></span>
+		<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre" name="nombre" required><br><br>
+		<label for="nota1">Nota 1:</label>
+		<input type="number" id="nota1" name="nota1" required><br><br>
+		<label for="nota2">Nota 2:</label>
+		<input type="number" id="nota2" name="nota2" required><br><br>
+		<label for="nota3">Nota 3:</label>
+        <input type="number" id="nota3" name="nota3" required><br><br>
+        <label for="nota3">Nota 4:</label>
+        <input type="number" id="nota4" name="nota4" required><br><br>
+        <label for="nota3">Nota 5:</label>
+        <input type="number" id="nota5" name="nota5" required><br><br>
+        <button type="submit" id="submit-btn">Agregar</button>
+        </form>
+        <div id="notas-list">
+        <h2>Lista de Notas</h2>
+        <table id="notas-table">
+        <thead>
+        <tr>
+        <th>Nombre</th>
+        <th>Nota 1</th>
+        <th>Nota 2</th>
+        <th>Nota 3</th>
+        <th>Nota 4</th>
+        <th>Nota 5</th>
+        <th>Promedio</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+            </table>
+            <button type="reset" id="reset-btn">Limpiar notas</button>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.js"></script>
+        <script src="entrega finaljs+Juan sebastian torres suarez.js"></script>
+        </body>
+        </html>
+        
+        
+        
