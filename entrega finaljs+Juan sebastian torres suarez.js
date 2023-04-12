@@ -2,6 +2,7 @@
 var notasForm = document.getElementById("notas-form");
 const notasTable = document.getElementById("notas-table");
 const resetBtn = document.getElementById("reset-btn");
+const ordenarBtn = document.getElementById("ordenar-btn");
 
 // Obtener las notas del almacenamiento local si existen, de lo contrario, crear un arreglo vacío
 const notasStorage = localStorage.getItem('notas');
@@ -113,4 +114,18 @@ resetBtn.addEventListener("click", () => {
       icon: 'success',
       confirmButtonText: 'Ok'
     });
+  });
+  // agregar un evento de clic al boton de organizar notas de amyor a menor
+  ordenarBtn.addEventListener("click", () => {
+    // Ordenar el arreglo de notas por promedio de mayor a menor
+    notas.sort((a, b) => b.promedio - a.promedio);
+    
+    // Actualizar la tabla de notas
+    actualizarTabla();
+    swal.fire({
+      title: 'Notas organizadas',
+      text: 'Todas las notas han sido organizadas de mayor a menor',
+      icon: 'success',
+      confirmButtonText: 'Ok'  
+    })
   });
